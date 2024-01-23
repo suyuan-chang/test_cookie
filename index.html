@@ -45,6 +45,7 @@
 
     // Function to set cookie, reload the page, and display cookie value
     function setCookieAndReload() {
+        /*
         // Make an AJAX request to the server to get the user's IP address
         var xhr = new XMLHttpRequest();
         xhr.open('GET', 'getUserIPAddress.php', true);
@@ -60,6 +61,11 @@
             }
         };
         xhr.send();
+        */
+        var timestamp = new Date().toISOString();
+        // Set the cookie with user's IP address and timestamp
+        setCookie('userCookie', timestamp, 7);
+        location.reload();
     }
 
     // Function to clear cookie, reload the page
